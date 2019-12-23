@@ -22,7 +22,7 @@ const Home: React.FC = () => {
               <IonRow responsive-md>
                 <IonCol>
                   <IonCard>
-                    <IonImg src="/img/cheesecake1.jpg" />
+                    <img src="/img/cheesecake1.jpg" />
                     <IonCardHeader>
                       <IonCardTitle>Apple Cider</IonCardTitle>
                     </IonCardHeader>
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
                 </IonCol>
                 <IonCol>
                   <IonCard>
-                    <IonImg src="/img/cheesecake2.jpg" />
+                    <img src="/img/cheesecake2.jpg" />
                     <IonCardHeader>
                       <IonCardTitle>Oreo</IonCardTitle>
                     </IonCardHeader>
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
               <IonRow responsive-md>
                 <IonCol>
                   <IonCard>
-                    <IonImg src="/img/cheesecake3.jpg" />
+                    <img src="/img/cheesecake3.jpg" />
                     <IonCardHeader>
                       <IonCardTitle>The Regular</IonCardTitle>
                     </IonCardHeader>
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
                 </IonCol>
                 <IonCol>
                   <IonCard>
-                    <IonImg src="/img/cheesecake4.jpg" />
+                    <img src="/img/cheesecake4.jpg" />
                     <IonCardHeader>
                       <IonCardTitle>Brown Sugar</IonCardTitle>
                     </IonCardHeader>
