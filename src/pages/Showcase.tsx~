@@ -1,0 +1,35 @@
+import { IonButton,IonButtons,IonImg,IonSlides,IonSlide,IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import React from 'react';
+
+const Home: React.FC = () => {
+    return (
+	<IonPage>
+	  <IonHeader>
+            <IonToolbar>
+              <IonButtons>
+                <IonTitle>Z's Cakes</IonTitle>
+                <IonButton>About</IonButton>
+              </IonButtons>
+            </IonToolbar>
+	  </IonHeader>
+	  <IonContent className="ion-padding">
+            <IonSlides>
+              <IonSlide><img src='/img/cheesecake1.jpg'/></IonSlide>
+              <IonSlide><img src='/img/cheesecake2.jpg'/></IonSlide>
+              <IonSlide><img src='/img/cheesecake3.jpg'/></IonSlide>
+              <IonSlide><img src='/img/cheesecake4.jpg'/></IonSlide>
+            </IonSlides>
+            The world is your oyster.
+            <p>
+              If you get lost, the{' '}
+              <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/">
+                docs
+              </a>{' '}
+              will be your guide.
+            </p>
+	  </IonContent>
+	</IonPage>
+    );
+};
+
+export default Home;
