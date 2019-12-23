@@ -14,9 +14,8 @@ const Home: React.FC = () => {
 	  </IonHeader>
 	  <IonContent className="ion-padding">
             <IonItem>
-              <IonTitle>Family recipe, made by Jews, twice baked cheese cakes.</IonTitle>
-        <IonLabel>You will never guess what the secret ingredient is...
-        </IonLabel>
+              <IonTitle>Family recipe, made by Jews.</IonTitle><br/>
+              <IonLabel>You will never guess what the secret ingredient is...</IonLabel>
             </IonItem>
             <IonGrid>
               <IonRow responsive-md>
