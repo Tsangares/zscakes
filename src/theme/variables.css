@@ -1,6 +1,8 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
-
+.image-center{
+    margin:0 auto;
+}
 /** Ionic CSS Variables **/
 :root {
   /** primary **/

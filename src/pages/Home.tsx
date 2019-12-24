@@ -1,76 +1,27 @@
-import { IonItemGroup,IonGrid,IonRow,IonCol,IonButton, IonCard, IonChip, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonIcon, IonItem, IonLabel,IonButtons,IonImg,IonSlides,IonSlide, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+// eslint-disable-next-line
+import { IonImg,IonAvatar,IonItemDivider,IonItemGroup,IonNote,IonGrid,IonRow,IonCol,IonButton, IonCard, IonChip, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonIcon, IonItem, IonLabel,IonButtons,IonSlides,IonSlide, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
-
+import Toolbar from './components/Toolbar';
+import Footer from './components/Footer';
+import CakeDisplay from './components/CakeDisplay';
+import Profile from './components/Profile';
 const Home: React.FC = () => {
     return (
 	<IonPage>
-	  <IonHeader>
-            <IonToolbar>
-              <IonButtons>
-                <IonTitle>Z's Cakes</IonTitle>
-                <IonButton>About</IonButton>
-              </IonButtons>
-            </IonToolbar>
-	  </IonHeader>
-	  <IonContent className="ion-padding">
-            <IonItem>
-              <IonTitle>Family recipe, made by Jews.</IonTitle><br/>
-              <IonLabel>You will never guess what the secret ingredient is...</IonLabel>
-            </IonItem>
-            <IonGrid>
-              <IonRow responsive-md>
-                <IonCol>
-                  <IonCard>
-                    <img src="/img/cheesecake1.jpg" />
-                    <IonCardHeader>
-                      <IonCardTitle>Apple Cider</IonCardTitle>
-                    </IonCardHeader>
-                    <IonCardContent>
-                      It is good and has a hint of apple cider in the cake.
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <img src="/img/cheesecake2.jpg" />
-                    <IonCardHeader>
-                      <IonCardTitle>Oreo</IonCardTitle>
-                    </IonCardHeader>
-                    <IonCardContent>
-                      The worsd one we make. Filled and covered in orgeo crusts or something with gagooun.
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-              </IonRow>
-              <IonRow responsive-md>
-                <IonCol>
-                  <IonCard>
-                    <img src="/img/cheesecake3.jpg" />
-                    <IonCardHeader>
-                      <IonCardTitle>The Regular</IonCardTitle>
-                    </IonCardHeader>
-                    <IonCardContent>
-                      With potatoes in the center, our classic overalls make a great fit for mining gold in the mines. 
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <img src="/img/cheesecake4.jpg" />
-                    <IonCardHeader>
-                      <IonCardTitle>Brown Sugar</IonCardTitle>
-                    </IonCardHeader>
-                    <IonCardContent>
-                      The title is fucking obvious. There is some god damn brown sugarin the cakes. Get over it and just simply buy it you pice of shit. 
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
+          <Toolbar/>
+          <IonContent className="ion-padding">
             <IonItemGroup>
-              
+              <IonItemDivider>
+                <IonLabel>Family recipe, made by Jews.</IonLabel>
+                <IonNote slot="end">You will never guess what the secret ingredient is</IonNote>
+              </IonItemDivider>
+              <h1 class="ion-text-center">Cheesecakes</h1>
             </IonItemGroup>
+            <CakeDisplay />
+            <Profile name="Jake Zwiebach" image="zwiebach.jpg" description="Hi im a jew and I make the cheesecake from my Jesus. The secret recipe for these cheesecakes has been past down for generations. Our twicebaked cheesecakes have been the product of celebration our family, the Zwiebachs. Our last name, Zwiebach, actually means twice baked, just like our cheesecakes." tags={['Owner','Sinner','Anarchist']}/>
+            <Footer />
           </IonContent>
+          
 	</IonPage>
     );
 };

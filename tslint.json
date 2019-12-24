@@ -1,3 +1,4 @@
 {
-  "extends": ["tslint-react"]
+    "extends": ["tslint-react"],
+    "eslint-disable-next-line": true
 }
