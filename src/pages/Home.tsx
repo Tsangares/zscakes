@@ -17,7 +17,7 @@ const Home: React.FC = () => {
               </IonItemDivider>
             </IonItemGroup>
             <CakeDisplay />
-            <a id="about"><Profile name="Jake Zwiebach" image="zwiebach.jpg" description="Hi im a jew and I make the cheesecake from my Jesus. The secret recipe for these cheesecakes has been past down for generations. Our twicebaked cheesecakes have been the product of celebration our family, the Zwiebachs. Our last name, Zwiebach, actually means twice baked, just like our cheesecakes." tags={['Owner','Sinner','Anarchist']}/></a>
+            <a id="about"><Profile name="Jake Zwiebach" image="zwiebach.jpg" description="Hi im a jew and I make the cheesecake from my Jesus. The secret recipe for these cheesecakes has been past down in my family for generations. Our twicebaked cheesecakes become the center of celebrations at potlucks and dinners - always eaten first. Our last name, Zwiebach, actually means twice baked, just like our cheesecakes." tags={['Owner','Sinner','Anarchist']}/></a>
             <Footer />
           </IonContent>
           
