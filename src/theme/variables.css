@@ -3,6 +3,9 @@ http://ionicframework.com/docs/theming/ */
 .image-center{
     margin:0 auto;
 }
+.big-text{
+    font-size: 200% !important;
+}
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
