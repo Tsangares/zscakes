@@ -5,7 +5,7 @@ import React from 'react';
 const CakeDisplay: React.FC = () => {
     return (
         <IonItemGroup>
-          <a id="cakes"><IonLabel color="dark" class="ion-margin ion-padding-top big-text ion-text-center">Cheesecakes</IonLabel></a>
+          <div id="cakes"><IonLabel color="dark" class="ion-margin ion-padding-top big-text ion-text-center">Cheesecakes</IonLabel></div>
           <IonGrid>
             <IonRow responsive-md>
               <IonCol size-xs={"12"} size-lg={"6"}>
