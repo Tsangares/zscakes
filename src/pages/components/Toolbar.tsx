@@ -8,8 +8,9 @@ const Toolbar: React.FC = () => {
           <IonToolbar>
             <IonButtons>
               <IonTitle>Z's Cakes</IonTitle>
-              <a href="/home#cakes"><IonButton>Cakes</IonButton></a>
-              <a href="/home#about"><IonButton>About</IonButton></a>
+              <IonButton href="">Home</IonButton>
+              <IonButton href="/home#cakes">Cakes</IonButton>
+              <IonButton href="/home#about">About</IonButton>
             </IonButtons>
           </IonToolbar>
 	</IonHeader>

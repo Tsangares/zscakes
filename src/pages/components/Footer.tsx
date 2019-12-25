@@ -6,7 +6,11 @@ const Toolbar: React.FC = () => {
     return (
         <IonFooter>
           <IonToolbar>
-            <IonTitle>Made by Hand.</IonTitle>
+            <IonButtons>
+              <IonTitle>Made by Hand.</IonTitle>
+              <IonButton href="/">Home</IonButton>
+              <IonButton href="/input">New Cake</IonButton>
+            </IonButtons>
           </IonToolbar>
         </IonFooter>
     );
