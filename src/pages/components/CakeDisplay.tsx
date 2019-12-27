@@ -1,59 +1,49 @@
 // eslint-disable-next-line
 import { IonItemGroup,IonLabel,IonGrid,IonRow,IonCol,IonCardHeader,IonCardContent,IonCardTitle,IonCard} from '@ionic/react';
-import React from 'react';
+import React,{useState,useEffect} from 'react';
+
+interface CakeProps{
+    title: String;
+    description: String;
+    image_url: String;
+};
+const Cake = (props: CakeProps)=>{
+    return (<IonCard>
+              <img alt="cheesecake" src={`/img/${props.image_url}`} />
+              <IonCardHeader>
+                <IonCardTitle>{props.title}</IonCardTitle>
+              </IonCardHeader>
+              <IonCardContent>{props.description}</IonCardContent>
+            </IonCard>);
+ };
+
+const getDisplay = (cake: CakeProps, i: number)=>{
+    return (<IonCol key={i} size-xs={"12"} size-lg={"6"}>
+            <Cake title={cake.title} image_url={cake.image_url} description={cake.description} />
+    </IonCol>);
+};
+
 
 const CakeDisplay: React.FC = () => {
+    var cakes=[{
+        image_url: 'cheesecake5.jpg',
+        title: 'cheesecake',
+        description: 'You can eat'
+    },];
+    const [display, setDisplay] = useState(cakes.map((cake,i)=>getDisplay(cake,i)));
+    useEffect(()=>{
+        fetch('https://z.nitza.space/cakes/?format=json')
+            .then(response=>response.json())
+            .then(response=>{
+                setDisplay(response.map((cake: any,i: number)=>getDisplay(cake,i)));
+            });
+    },[]);
     return (
         <IonItemGroup>
           <div id="cakes"><IonLabel color="dark" class="ion-margin ion-padding-top big-text ion-text-center">Cheesecakes</IonLabel></div>
           <IonGrid>
-            <IonRow responsive-md>
-              <IonCol size-xs={"12"} size-lg={"6"}>
-                <IonCard>
-                  <img alt="cheesecake" src="/img/cheesecake1.jpg" />
-                  <IonCardHeader>
-                    <IonCardTitle>Apple Cider</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    It is good and has a hint of apple cider in the cake.
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-              <IonCol size-xs={"12"} size-lg={"6"}>
-                <IonCard>
-                  <img alt="cheesecake" src="/img/cheesecake2.jpg" />
-                  <IonCardHeader>
-                    <IonCardTitle>Oreo</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    The worsd one we make. Filled and covered in orgeo crusts or something with gagooun.
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-            </IonRow>
-            <IonRow responsive-md>
-              <IonCol size-xs={"12"} size-lg={"6"}>
-                <IonCard>
-                  <img alt="cheesecake" src="/img/cheesecake3.jpg" />
-                  <IonCardHeader>
-                    <IonCardTitle>The Regular</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    With potatoes in the center, our classic overalls make a great fit for mining gold in the mines. 
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-              <IonCol size-xs={"12"} size-lg={"6"}>
-                <IonCard>
-                  <img alt="cheesecake" src="/img/cheesecake4.jpg" />
-                  <IonCardHeader>
-                    <IonCardTitle>Brown Sugar</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    The title is fucking obvious. There is some god damn brown sugarin the cakes. Get over it and just simply buy it you pice of shit. 
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
+            <IonRow>
+              {display}
             </IonRow>
           </IonGrid>
         </IonItemGroup>

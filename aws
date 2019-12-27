@@ -1,0 +1,5 @@
+#!/bin/bash
+$(aws ecr get-login --no-include-email --region us-west-1)
+docker build -t cakes .
+docker tag cakes:latest 239801155156.dkr.ecr.us-west-1.amazonaws.com/cakes:latest
+docker push 239801155156.dkr.ecr.us-west-1.amazonaws.com/cakes:latest
