@@ -5,11 +5,11 @@ import React,{useState,useEffect} from 'react';
 interface CakeProps{
     title: String;
     description: String;
-    image_url: String;
+    image: String;
 };
 const Cake = (props: CakeProps)=>{
     return (<IonCard>
-              <img alt="cheesecake" src={`/img/${props.image_url}`} />
+              <img alt="cheesecake" src={`${props.image}`} />
               <IonCardHeader>
                 <IonCardTitle>{props.title}</IonCardTitle>
               </IonCardHeader>
@@ -19,14 +19,14 @@ const Cake = (props: CakeProps)=>{
 
 const getDisplay = (cake: CakeProps, i: number)=>{
     return (<IonCol key={i} size-xs={"12"} size-lg={"6"}>
-            <Cake title={cake.title} image_url={cake.image_url} description={cake.description} />
+            <Cake title={cake.title} image={cake.image} description={cake.description} />
     </IonCol>);
 };
 
 
 const CakeDisplay: React.FC = () => {
     var cakes=[{
-        image_url: 'cheesecake5.jpg',
+        image: 'https://zscakes.com/img/cheesecake1.jpg',
         title: 'cheesecake',
         description: 'You can eat'
     },];

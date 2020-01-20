@@ -10,12 +10,6 @@ const Home: React.FC = () => {
 	<IonPage>
           <Toolbar/>
           <IonContent className="ion-padding">
-            <IonItemGroup>
-              <IonItemDivider>
-                <IonLabel>Family recipe, made by Jews.</IonLabel>
-                <IonNote slot="end">You will never guess what the secret ingredient is</IonNote>
-              </IonItemDivider>
-            </IonItemGroup>
             <CakeDisplay />
             <div id="about"><Profile /></div>
             <Footer />

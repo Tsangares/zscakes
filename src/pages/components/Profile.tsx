@@ -58,7 +58,7 @@ const Profile = () => {
             .then(response=>{
                 setProfile(getPerson(response[0]));
             });
-    });
+    },[]);
     
     return (
         <IonGrid>

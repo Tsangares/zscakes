@@ -20,6 +20,7 @@ const submitSurvey = ()=>{
 }
 */
 const NewCake: React.FC = () => {
+    // eslint-disable-next-line  
     const [state, setState] = useState(0);
     return (
 	<IonPage>
