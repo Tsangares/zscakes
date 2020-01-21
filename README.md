@@ -8,4 +8,4 @@ The docker container works if you want to build from `Dockerfile`. Alternativly,
 
 Note: requires `react-scripts` installed.
 
-![webpage](https://raw.githubusercontent.com/Tsangares/zscakes/master/Screenshot_20200120-225055.png)
+![webpage](https://raw.githubusercontent.com/Tsangares/zscakes/master/Screenshot_20200120-225055.png  width="350" )
